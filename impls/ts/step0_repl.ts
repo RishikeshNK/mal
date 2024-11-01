@@ -1,35 +1,27 @@
-import { readline } from "./node_readline";
-
-// READ
-function read(str: string): any {
-    // TODO
-    return str;
+function read(input: string): string {
+  return input;
 }
 
-// EVAL
-function evalMal(ast: any, _env?: any): any {
-    // TODO
-    return ast;
+function evaluate(input: string): string {
+  return input;
 }
 
-// PRINT
-function print(exp: any): string {
-    // TODO
-    return exp;
+function print(input: string): string {
+  return input;
 }
 
-function rep(str: string): string {
-    // TODO
-    return print(evalMal(read(str)));
+function rep(input: string): string {
+  return print(evaluate(read(input)));
 }
 
-while (true) {
-    const line = readline("user> ");
-    if (line == null) {
-        break;
+function main() {
+  while (true) {
+    const input = prompt("user> ");
+    if (input === null) {
+      break;
     }
-    if (line === "") {
-        continue;
-    }
-    console.log(rep(line));
+    console.log(rep(input));
+  }
 }
+
+main();
